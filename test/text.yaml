@@ -1,0 +1,22 @@
+- alias: object
+  api: createObject
+  headers:
+    - a
+    - b
+  body:
+    label:
+      language_code: 1033
+      text: 测试Action
+    api_name: '@inject(api_name, @string)'
+    description:
+      language_code: 1033
+      text: KATest
+    allow_search: false
+    time_machine: false
+    record_name:
+      label:
+        language_code: 1033
+        text: KATest
+      type: multilingual
+    assert:
+      - '@checkStatusCode()'
